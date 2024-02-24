@@ -1,0 +1,1 @@
+97b70309f6396203ee5f2ac55b87776d80e9b91c85854aa53e0af22ba8987ed1  /target/wasm32-unknown-unknown/release/dao_voting_cw721_staked_xpx.wasm

@@ -1,0 +1,10 @@
+/Users/cvanwert/PreStaking/cw-course/dao-voting-cw721-staked/target/release/deps/libprost_types-ec3399ddf7796576.rmeta: /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/lib.rs /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/datetime.rs /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/compiler.rs /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/protobuf.rs
+
+/Users/cvanwert/PreStaking/cw-course/dao-voting-cw721-staked/target/release/deps/libprost_types-ec3399ddf7796576.rlib: /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/lib.rs /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/datetime.rs /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/compiler.rs /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/protobuf.rs
+
+/Users/cvanwert/PreStaking/cw-course/dao-voting-cw721-staked/target/release/deps/prost_types-ec3399ddf7796576.d: /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/lib.rs /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/datetime.rs /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/compiler.rs /Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/protobuf.rs
+
+/Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/lib.rs:
+/Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/datetime.rs:
+/Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/compiler.rs:
+/Users/cvanwert/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/protobuf.rs:
