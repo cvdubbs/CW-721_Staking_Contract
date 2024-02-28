@@ -5,8 +5,8 @@
 **/*.rs.bk
 
 # Build results
-target/
-artifacts/
+/target
+/artifacts
 
 # IDEs
 .idea/
