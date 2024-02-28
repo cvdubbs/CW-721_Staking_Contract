@@ -227,11 +227,9 @@ pub fn execute_stake(
             expected: config.nft_address,
         });
     }
-    if !has_coins(&info.funds, &coins(STAKING_FEE, "usei")) {
-        return Err(StdError::generic_err("Insufficient staking fee"));
-    }
+    let staking_start_time = env.block.time.seconds();
     let staker = deps.api.addr_validate(&wrapper.sender)?;
-    register_staked_nft(deps.storage, env.block.height, &staker, &wrapper.token_id)?;
+    register_staked_nft(deps.storage, env.block.height, &staker, &wrapper.token_id, &staking_start_time)?;
     let hook_msgs = stake_nft_hook_msgs(
         HOOKS,
         deps.storage,
@@ -254,9 +252,27 @@ pub fn execute_unstake(
     if token_ids.is_empty() {
         return Err(ContractError::ZeroUnstake {});
     }
-    if !has_coins(&info.funds, &coins(UNSTAKING_FEE, "usei")) {
-        return Err(StdError::generic_err("Insufficient unstaking fee"));
-    }
+    for token_id in token_ids.iter() {
+        let staked_nft = STAKED_NFTS.load(deps.storage, token_id)?;
+        let staking_duration_seconds = env.block.time.seconds() - staked_nft.staking_start_time;
+        let staking_duration_days = staking_duration_seconds / 86400; // Convert to days
+
+        let rewards = Uint128::from(staking_duration_days * 10); // 10 CW20 tokens per day
+
+        let cw20_transfer_msg = CosmosMsg::Wasm(WasmMsg::Execute {
+            // actual CW20 contract address here below
+            contract_addr: "sei696969crystaltokenscontractaddy".to_string(),
+            msg: to_binary(&cw20::Cw20ExecuteMsg::Transfer {
+                recipient: staked_nft.owner.to_string(),
+                amount: rewards,
+            })?,
+            funds: vec![],
+        });
+
+        // Include this message in your response to transfer the rewards
+        return Ok(Response::new().add_message(cw20_transfer_msg)
+    );}
+
     register_unstaked_nfts(deps.storage, env.block.height, &info.sender, &token_ids)?;
 
     // Provided that the backing cw721 contract is non-malicious:
